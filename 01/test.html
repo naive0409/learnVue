@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+	<script type="text/javascript" src="./01.js"></script>
+</head>
+<body>
+
+	<div id="t">
+		<!-- 代码为VUE模板 -->
+		<h1>1hello,{{name}},</h1>
+		<h1>{{address.toUpperCase()}},</h1>
+		<h1>{{Date.now()}}</h1>
+	</div>
+
+	<!-- 容器和实例一一对应 -->
+	<script type="text/javascript">
+		Vue.config.productionTip = false
+
+		// 创建VUE实例
+		new Vue({
+			el:'#t',//element
+			//  el 当前容器为哪个容器服务，值通常为css的选择器，这里为id
+			// el:document.getElementById('root'),
+			data:{
+				// data 中存储数据供el使用
+				name:'w',
+				address:'location'
+			}
+		})
+	</script>
+
+</body>
+</html>
